@@ -1,0 +1,80 @@
+
+
+.dark-theme {
+    --background-color: black;
+    --color: white;
+}
+
+.light-theme {
+    --background-color: #FBFCFD;
+    --color: rgb(18, 18, 18);
+}
+
+html,
+body,
+input,
+select,
+#dropdown,
+.modal-content,
+.pa-1.offcanvas.offcanvas-start.show,
+svg ,.dropdown-menu.show{
+    background-color: var(--background-color) !important;
+    color: var(--color) !important;
+    fill: var(--color) !important;
+    border-color: var(--color) !important;
+}
+body{
+    background-color: #FBFCFD !important;
+}
+
+.bgb{
+    background-color:#03293c;
+}
+
+.bglb{
+    background-color:#077fbb;
+}
+.backimage{
+    background-image: url(https://etherscan.io/images/svg/waves-light.svg);
+}
+// #inputtxt,#inputtxt::placeholder{
+//     color: white !important;
+// }
+
+input:focus{
+    outline: none !important;
+}
+
+.fw{
+    fill: white 
+    !important;
+}
+
+.maxw60{
+    max-width: 60rem !important;
+}
+
+.mt_3{
+    margin-top: -13rem !important;
+}
+
+.boxshadow{
+    box-shadow: 0rem 0.5rem 1.2rem #bdc5d133 !important;
+}
+
+.gc{
+    color: #58B1A0 !important;
+}
+.border{
+    border: 1px solid rgb(220, 220, 220) !important;
+}
+
+.bgg{
+    background-color: #f4f4f4 !important;
+}
+.bgdg{
+    background-color: #dad9d9 !important;
+}
+.bcw{
+    background-color: white !important;
+}
