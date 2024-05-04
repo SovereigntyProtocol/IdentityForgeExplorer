@@ -4,10 +4,15 @@ import {
 } from 'reactstrap';
 
 import { Link } from 'react-router-dom';
-import moment from 'moment';
+import moment from "moment";
 import i18n from "meteor/universe:i18n";
 import { FaXTwitter } from "react-icons/fa6";
-import { FaFacebook, FaInstagram, FaMedium, FaRedditAlien } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaMedium,
+  FaRedditAlien,
+} from "react-icons/fa";
 
 const T = i18n.createComponent();
 
@@ -75,7 +80,7 @@ export default class Footer extends React.Component {
                 contracts platform.
               </div>
               <img
-                src="https://etherscan.io/images/map.png"
+                src="https://res.cloudinary.com/dd3vn1vfc/image/upload/v1714828252/cfjmepcqmkrucg7lmlwg.png"
                 className="w100"
                 alt=""
               />
