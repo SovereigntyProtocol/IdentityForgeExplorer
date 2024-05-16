@@ -96,8 +96,20 @@ export default class Footer extends React.Component {
             </div>
             <div className="">
               <div className="fs125 fw600 mb1">Community</div>
-              <div className="mb1">API Documentation</div>
-              <div className="mb1">Knowledge Base</div>
+              <a
+                href="https://develop.sovereignty.one/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="mb1">API Documentation</div>
+              </a>
+              <a
+                href="https://docs.sovereignty.one/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="mb1">White Paper</div>
+              </a>
               <div className="mb1">Network Status</div>
               <div className="mb1">Newsletters</div>
             </div>
