@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchBar from "./SearchBar";
 
 function Headero() {
-  return <></>;
+  return <>{<div className="">sfa</div>}</>;
 }
 
 export default Headero;

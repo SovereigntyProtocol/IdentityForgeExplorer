@@ -1,6 +1,7 @@
 import qs from 'querystring';
 import React, { Component } from 'react';
-import { HTTP } from 'meteor/http';
+import { HTTP } from "meteor/http";
+import { RxCross2 } from "react-icons/rx";
 import {
   Badge,
   Button,
@@ -21,13 +22,14 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-} from 'reactstrap';
+} from "reactstrap";
 import { Link } from "react-router-dom";
 import { IoReorderThree } from "react-icons/io5";
 import i18n from "meteor/universe:i18n";
 import SearchBar from "./SearchBar.jsx";
 import LedgerModal from "../ledger/LedgerModal.jsx";
 import Account from "./Account.jsx";
+import Headero from "./Headero.jsx";
 
 const T = i18n.createComponent();
 
@@ -191,6 +193,12 @@ export default class Header extends Component {
     this.props.history.push(redirectUrl + query);
   };
 
+  toggleAAADiv = () => {
+    this.setState((prevState) => ({
+      isAAAToggle: !prevState.isAAAToggle,
+    }));
+  };
+
   render() {
     const signedInAddress = getUser();
     return (
@@ -290,7 +298,7 @@ export default class Header extends Component {
             </UncontrolledDropdown>
           </div>
           <div className="m-q-a-d-n">
-            <IoReorderThree className="fs2" />
+            <IoReorderThree className="fs2" onClick={this.toggleAAADiv} />
           </div>
         </div>
         <div className="">
@@ -305,11 +313,113 @@ export default class Header extends Component {
                 href="mailto:social@sovereignty.one"
                 target="_blank"
                 rel="noopener noreferrer"
-              >{" "}
-              social@sovereignty.one</a> to put your ad here.
+              >
+                {" "}
+                social@sovereignty.one
+              </a>{" "}
+              to put your ad here.
             </div>
           </div>
         </div>
+        {this.state.isAAAToggle && (
+          <div className="w100 bcw h100 psa t0 zi999">
+            <div className="pa1 df aic  jcsb fs15 fw600 ">
+              <div className="df aic g1">
+                {" "}
+                <img src="/img/logo-v3.png" className="w3 br50" alt="" />
+                Identity Forge
+              </div>
+              <div className="">
+                <RxCross2 onClick={this.toggleAAADiv} />
+              </div>
+            </div>
+            <div className="df fdc pa2 fw600 g2">
+              <a href="/">
+                {" "}
+                <div className="">Home</div>
+              </a>{" "}
+              <a href="/validators">
+                {" "}
+                <div className="">
+                  {" "}
+                  <T>navbar.validators</T>
+                </div>
+              </a>{" "}
+              <a href="/blocks">
+                {" "}
+                <div className="">
+                  {" "}
+                  <T>navbar.blocks</T>
+                </div>
+              </a>{" "}
+              <a href="/transactions">
+                {" "}
+                <div className="">
+                  {" "}
+                  <T>navbar.transactions</T>
+                </div>
+              </a>{" "}
+              <a href="/proposals">
+                {" "}
+                <div className="">
+                  {" "}
+                  <T>navbar.proposals</T>
+                </div>
+              </a>{" "}
+              <a href="/voting-power-distribution">
+                {" "}
+                <div className="wsnw">
+                  {" "}
+                  <T>navbar.votingPower</T>
+                </div>
+              </a>
+              <UncontrolledDropdown inNavbar className="bcw">
+                <DropdownToggle nav caret className="pa0 ma0">
+                  <T>navbar.lang</T>
+                </DropdownToggle>
+                <DropdownMenu right className="bcw">
+                  <DropdownItem
+                    className="bcw"
+                    onClick={(e) => this.handleLanguageSwitch("en-US", e)}
+                  >
+                    <T>navbar.english</T>
+                  </DropdownItem>
+                  <DropdownItem
+                    className="bcw"
+                    onClick={(e) => this.handleLanguageSwitch("es-ES", e)}
+                  >
+                    <T>navbar.spanish</T>
+                  </DropdownItem>
+                  {/* <DropdownItem className='bcw' onClick={(e) => this.handleLanguageSwitch('it-IT', e)}><T>navbar.italian</T></DropdownItem> */}
+                  <DropdownItem
+                    className="bcw"
+                    onClick={(e) => this.handleLanguageSwitch("pl-PL", e)}
+                  >
+                    <T>navbar.polish</T>
+                  </DropdownItem>
+                  <DropdownItem
+                    className="bcw"
+                    onClick={(e) => this.handleLanguageSwitch("ru-RU", e)}
+                  >
+                    <T>navbar.russian</T>
+                  </DropdownItem>
+                  <DropdownItem
+                    className="bcw"
+                    onClick={(e) => this.handleLanguageSwitch("zh-Hant", e)}
+                  >
+                    <T>navbar.chinese</T>
+                  </DropdownItem>
+                  <DropdownItem
+                    className="bcw"
+                    onClick={(e) => this.handleLanguageSwitch("zh-Hans", e)}
+                  >
+                    <T>navbar.simChinese</T>
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            </div>
+          </div>
+        )}
       </div>
     );
   }

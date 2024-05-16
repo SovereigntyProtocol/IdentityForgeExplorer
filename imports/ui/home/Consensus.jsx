@@ -97,7 +97,7 @@ export default class Consensus extends Component{
                 <div className="fs125 fw600 card-title">
                   <T>blocks.proposer</T>
                 </div>
-                <div className="display-4 value text-primary">
+                <div className="display-4 value text-primary fs125 fw600 df aic g1 jcc mt2">
                   {" "}
                   <Link
                     to={`/validator/${this.props.consensus.proposerAddress}`}
