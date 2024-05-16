@@ -20,3 +20,11 @@ button.menu-button-mobile.m-l-1.btn.btn-primary:hover {
 .fdc{
     flex-direction: column !important;
 }
+
+.nav-pills .nav-link.active, .btn-primary{
+    color: white !important;
+}
+
+.nav-pills{
+    margin-bottom: 1rem !important;
+}
