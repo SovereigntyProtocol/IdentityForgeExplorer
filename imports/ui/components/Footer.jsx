@@ -71,7 +71,7 @@ export default class Footer extends React.Component {
           <div className="df g3 mt3 flex-wrap jcsb">
             <div className="maxw30">
               <div className="df g1 aic mb1 fs15 fw600">
-                <img src="/img/logo-v3.png" alt="" className="w3 br50" />
+                <img src="/img/logo-v3.png" alt="" className="w3 " />
                 Powered by Sovereign-T
               </div>
               <div className="mb1">

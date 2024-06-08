@@ -205,7 +205,7 @@ export default class Header extends Component {
       <div className="mb7">
         <div className="df aic jcsb g5 px1 py1 fw600">
           <div className="df aic g1">
-            <img src="/img/logo-v3.png" className="w3 br50" alt="logo" />
+            <img src="/img/logo-v3.png" className="w3 " alt="logo" />
             <Link to="/">
               {" "}
               <div className="fs15  wsnw"> Identity Forge</div>
@@ -326,7 +326,7 @@ export default class Header extends Component {
             <div className="pa1 df aic  jcsb fs15 fw600 ">
               <div className="df aic g1">
                 {" "}
-                <img src="/img/logo-v3.png" className="w3 br50" alt="" />
+                <img src="/img/logo-v3.png" className="w3 " alt="" />
                 Identity Forge
               </div>
               <div className="">
