@@ -304,7 +304,7 @@ export default class Header extends Component {
         <div className="">
           <div className="pt6 pb4 bgb px1 backimage cw">
             <div className="fw600 fs15 mb05">
-              The Sovereign-T Identity Forge Blockchain Explorer
+              The SovereignT Labs Identity Forge Blockchain Explorer
             </div>
             <SearchBar id="header-search" history={this.props.history} />
             <div className="mt05 fw600 pb7">

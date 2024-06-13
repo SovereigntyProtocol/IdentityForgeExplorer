@@ -1,12 +1,11 @@
-
-import React, { Component } from 'react';
-import { Row, Col } from 'reactstrap';
-import ChainStatus from './ChainStatusContainer.js';
-import ChainInfo from '../components/ChainInfo.jsx'
-import Consensus from './ConsensusContainer.js';
+import React, { Component } from "react";
+import { Row, Col } from "reactstrap";
+import ChainStatus from "./ChainStatusContainer.js";
+import ChainInfo from "../components/ChainInfo.jsx";
+import Consensus from "./ConsensusContainer.js";
 import { Helmet } from "react-helmet";
-import BlocksTable from '/imports/ui/blocks/BlocksTable.jsx'
-import Transactions from '/imports/ui/transactions/TransactionsList.jsx'
+import BlocksTable from "/imports/ui/blocks/BlocksTable.jsx";
+import Transactions from "/imports/ui/transactions/TransactionsList.jsx";
 
 export default class Home extends Component {
   constructor(props) {
@@ -17,7 +16,7 @@ export default class Home extends Component {
     return (
       <div id="home">
         <Helmet>
-          <title>Discovery Explorer</title>
+          <title></title>
         </Helmet>
         <div className="mb4 mt_3 bcw br10 pa2 boxshadow border">
           <ChainStatus />
@@ -39,5 +38,4 @@ export default class Home extends Component {
       </div>
     );
   }
-
 }
