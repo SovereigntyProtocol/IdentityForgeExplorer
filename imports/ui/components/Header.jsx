@@ -1,5 +1,5 @@
-import qs from 'querystring';
-import React, { Component } from 'react';
+import qs from "querystring";
+import React, { Component } from "react";
 import { HTTP } from "meteor/http";
 import { RxCross2 } from "react-icons/rx";
 import {
@@ -205,11 +205,11 @@ export default class Header extends Component {
       <div className="mb7">
         <div className="df aic jcsb g5 px1 py1 fw600">
           <div className="df aic g1">
-            <img src="/img/logo-v3.png" className="w3 " alt="logo" />
             <Link to="/">
               {" "}
-              <div className="fs15  wsnw"> Identity Forge</div>
+              <img src="/img/navlogo.png" className="w15 " alt="logo" />{" "}
             </Link>
+            {/* <div className="fs15  wsnw"> Identity Forge</div> */}
           </div>
 
           <div className="df aic g2 m-q-b-d-n">
@@ -325,9 +325,7 @@ export default class Header extends Component {
           <div className="w100 bcw h100 psa t0 zi999">
             <div className="pa1 df aic  jcsb fs15 fw600 ">
               <div className="df aic g1">
-                {" "}
-                <img src="/img/logo-v3.png" className="w3 " alt="" />
-                Identity Forge
+                <img src="/img/navlogo.png" className="w15" alt="" />
               </div>
               <div className="">
                 <RxCross2 onClick={this.toggleAAADiv} />
@@ -424,8 +422,3 @@ export default class Header extends Component {
     );
   }
 }
-
-
-
-
-
